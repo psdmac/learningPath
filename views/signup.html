@@ -1,0 +1,13 @@
+<div class="signup-wrapper">
+  <form id="signup-form" ng-submit="signup()">
+    <label for="username"><i class="fa fa-user"></i>username</label>
+    <input id="username" name="username" type="username" placeholder="username" required ng-model="user.username">
+    <label for="email"><i class="fa fa-envelope"></i>Email</label>
+    <input id="email" name="email" type="email" placeholder="email" required ng-model="user.email">
+    <label for="password"><i class="fa fa-lock"></i>Password</label>
+    <input id="password" name="password" type="password" placeholder="password" required ng-model="user.password">
+    <label for="password"><i class="fa fa-lock"></i>Repeat Password</label>
+    <input id="repeat-password" name="password" type="password" placeholder="repeat password" required ng-model="user.rpassword">
+    <input id="submit" class="btn" type="submit" value="註冊">
+  </form>
+</div>

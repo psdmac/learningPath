@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" ng-app="myApp"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Learning Path</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="stylesheets/font-awesome.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="stylesheets/style.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="//www.parsecdn.com/js/parse-1.2.18.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <div id="seo-wrapper">
+            <h1>Changee LearningPath - 別讓學習繞遠路</h2>
+              <p>
+                在網路的時代，我們在開始學習新領域時，可以透過 Google 找到許多學習的「資訊」，然而過多的資訊反而無法判斷什麼才是適合自己的「資源」。現有的學習資源非常豐富，但卻散落在各處，使得「自我學習」時總是花費大量時間在搜尋適合自己的資訊。因此我們希望能夠建立 Changee Learning Path「學習路徑平台」，整合資源與資訊，透過「學習分類帽」、「學習軌跡」、「實體資源」三個主要項目，建立方便自學的「學習路徑平台」。
+              </p>
+        </div>
+        <header ng-controller="HeaderCtrl">
+            <div class="main-container">
+                <a href="/" class="brand"><span class="changee">CHANGEE</span> LearningPath</a>
+                <ul class="menus">
+                  <li ng-hide="authStatus"><a class="btn login-btn-header" href="#!/login">登入</a></li>
+                  <li ng-show="authStatus"><a class="btn logout-btn-header">登出</a></li>
+                </ul>
+                
+            </div>
+
+        </header>
+        <div id="project-bg"></div>
+        <div id="body">
+            <div class="tab-menu" ng-controller="TabCtrl">
+                <div class="main-container">
+                    <ul class="tabs" ng-hide="currentRoute=='/login' || currentRoute=='/signup'">
+                        <li class="tab" ng-class="{ active: currentRoute=='/tool' }"><a href="#!/tool" class="tab-text"><span>學習</span>分類帽</a></li>
+                        <li class="tab" ng-class="{ active: currentRoute=='/course' }"><a href="#!/course" class="tab-text"><span>學習</span>軌跡</a></li>
+                        <li class="tab" ng-class="{ active: currentRoute=='/speaker' }"><a href="#!/speaker" class="tab-text">實體資源</a></li>
+                    </ul>
+                    <ul class="tabs" ng-show="currentRoute=='/login' || currentRoute=='/signup'">
+                        <li class="tab" ng-class="{ active: currentRoute=='/login' }"><a href="#!/login" class="tab-text">登入</a></li>
+                        <li class="tab" ng-class="{ active: currentRoute=='/signup' }"><a href="#!/signup" class="tab-text">註冊</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main-container">
+                <div class="content">
+                    <div ng-view></div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p class="fblink">
+                <a target="_blank" href="https://www.facebook.com/changeeacross">CHANGEE ACROSS粉絲團</a>
+                <a target="_blank" id="changeeFB" href="https://www.facebook.com/changeeinfo">CHANGEE粉絲團</a>
+            </p>
+        </footer>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script type="text/javascript">
+            Parse.initialize("EY0Vzni9XsJTNKnIU6EW3Ix1lUfZiaxQIbGyjqrp", "uQQiH31smzlLdi6XQIvcUEFbnT6tADtLLcvLVzFF");
+        </script>
+        <script src="js/vendor/angular.js"></script>
+        <script src="js/vendor/angular-route.js"></script>
+        <script src="js/vendor/angular-cookies.js"></script>
+        <script src="js/vendor/angular-sanitize.js"></script>
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/textAngular/1.2.1/textAngular-sanitize.min.js'></script>
+        <script src='http://cdnjs.cloudflare.com/ajax/libs/textAngular/1.2.1/textAngular.min.js'></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/angular/app.js"></script>
+        <script src="js/angular/factory.js"></script>
+        <script src="js/angular/login.js"></script>
+        <script src="js/angular/create.js"></script>
+        <div id="fb-root"></div>
+        <!-- Facebook SDK. -->
+        <script>
+          window.fbAsyncInit = function() {
+            Parse.FacebookUtils.init({
+              appId      : '425646337576852', // Facebook App ID
+              cookie     : true, // enable cookies to allow Parse to access the session
+              xfbml      : true,  // parse XFBML
+              version    : 'v1.0'
+            });
+            // Additional initialization code here
+            $('header').scope().loginWithToken()
+          };
+          (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/zh_TW/all.js";
+            fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'facebook-jssdk'));
+        </script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+    </body>
+</html>

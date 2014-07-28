@@ -1,0 +1,28 @@
+<h1>學習工具帽</h1>
+<h2>標籤列表</h2>
+<ul class="tag-list">
+  <li class="tag-wrapper" ng-repeat="tag in tags">
+    <label for="{{tag.objectId}}" class="tag" ng-class="{active: tag.value}">{{tag.zh_tw}}</label>
+    <input id="{{tag.objectId}}" class="tag-input" type="checkbox" ng-init="tag.value=false" ng-model="tag.value" ng-change="filterTag()">
+  </li>
+</ul>
+<h2>工具列表(共{{total}}個)</h2>
+<ul>
+  <div class="list-wrapper" ng-repeat="list in lists">
+    <div class="icon-image-wrapper">
+      <div class="icon-image-inner">
+        <img class="icon-image" ng-src="{{list.image}}">
+      </div>
+    </div>
+    <div class="intro">
+      <h2>{{list.name}}</h2>
+      <h3>{{list.company}}</h3>
+    </div>
+    <ul class="tag-list">
+      <li class="tag-wrapper" ng-repeat="tag in tags" ng-if="checkTag(tag.objectId, list.tags)">
+        <label for="{{tag.objectId}}" class="tag" ng-class="{active: tag.value}">{{tag.zh_tw}}</label>
+      </li>
+    </ul>
+    <article class="list-description" ng-bind-html="list.description"></article>
+  </div>
+</ul>

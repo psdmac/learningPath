@@ -1,0 +1,36 @@
+.login-wrapper, .signup-wrapper
+  width: 280px
+  margin: 0 auto
+  padding-top: 100px
+  padding-bottom: 300px
+  overflow: hidden
+  +box-sizing(border-box)
+  .fa
+    margin-right: 0.5em
+  .btn
+    text-align: center
+    width: 100%
+    +box-sizing(border-box)
+  .or
+    text-align: center
+#login-form, #signup-form, #create-tool-form
+  +box-sizing(border-box)
+  input
+    +box-sizing(border-box)
+    width: 100%
+    padding: 10px 5px
+    margin: 0
+  #submit
+    margin-top: 0.5em
+    border: 0
+    background: $changee
+    +box-shadow(inset 0px -1px darken($changee, 10%))
+    &:hover
+      +box-shadow(inset 0px -1px darken(#ea4c88, 10%))
+      background: darken(#ea4c88, 10%)
+    &:disabled
+      background: darken(#ea4c88, 20%)
+      +box-shadow(inset 0px -1px darken(#ea4c88, 20%))
+  textarea
+    width: 100%
+    +box-sizing(border-box)

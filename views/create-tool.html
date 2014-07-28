@@ -1,0 +1,35 @@
+<h1>建立新工具</h1>
+<form id="create-tool-form" ng-submit="createTool()">
+  <label for="name">名稱</label>
+  <input id="name" type="text" placeholder="工具名稱" ng-model="tool.name">
+  <label for="company">公司名稱</label>
+  <input id="company" type="text" placeholder="公司名稱" ng-model="tool.company">
+  <label for="icon-link">ICON 連結</label>
+  <input id="icon-link" type="url" placeholder="圖片連結" ng-model="tool.iconLink">
+  <label for="app-link">網站連結</label>
+  <input id="app-link" type="url" placeholder="網站連結" ng-model="tool.appLink">
+  <ul class="tag-list">
+    <li class="tag-wrapper" ng-repeat="tag in tags">
+      <label for="{{tag.objectId}}" class="tag" ng-class="{active: tag.value}">{{tag.zh_tw}}</label>
+      <input id="{{tag.objectId}}" class="tag-input" type="checkbox" ng-model="tag.value">
+    </li>
+  </ul>
+  <label for="short-description">簡短描述（50字以內）</label>
+  <textarea id="short-description" ng-model="tool.shortDescription"></textarea>
+  <label for="description">描述</label>
+  <text-angular id="text-angular" ng-model="htmlContent" name="demo-editor" ta-text-editor-class="border-around main-container" ta-html-editor-class="border-around"></text-angular>
+  <input id="submit" type="submit" ng-disabled="tool.name==undefined
+   || tool.name.length==0 
+   || tool.company==undefined 
+   || tool.company.length==0 
+   || ajax 
+   || tool.shortDescription.length > 50 
+   || tool.shortDescription==undefined 
+   || tool.shortDescription.length==0
+   || tool.appLink==undefined
+   || tool.appLink.length==0
+   || tool.iconLink==undefined
+   || tool.iconLink.length==0">
+
+</form>
+

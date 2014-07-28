@@ -1,0 +1,61 @@
+.tag-list
+  list-style: none
+.tag-wrapper
+  list-style: none
+  +inline-block()
+.tag
+  +inline-block()
+  margin: 3px
+  padding: 3px
+  border: 1px solid darken($changee, 10%)
+  border-radius: 5px
+  color: darken($changee, 10%)
+  +transition(0.3s)
+  &:hover
+    background: darken($changee, 10%)
+    color: #f1f1f1
+  &.active
+    background: $changee
+    color: #f1f1f1
+.tag-input
+  display: none
+
+.ta-toolbar
+  margin-top: 0.5em
+  .btn-group
+    +inline-block()
+    margin-right: 0.5em
+    &:last-child
+      margin-right: 0
+.ta-editor
+  margin-top: 0.5em
+  margin-bottom: 0.5em
+  border: 1px solid darken(#f1f1f1, 20%) 
+  
+.list-wrapper
+  +span-columns(12)
+  margin-bottom: 3em
+.icon-image-wrapper
+  +span-columns(12)
+  +at-breakpoint($small)
+    +span-columns(6)
+  +at-breakpoint($medium)
+    +span-columns(3)
+  .icon-image-inner
+    width: 100%
+    padding-top: 100%
+    position: relative
+  .icon-image
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+.intro
+  +span-columns(12)
+  +at-breakpoint($small)
+    +span-columns(6 omega)
+  +at-breakpoint($medium)
+    +span-columns(9 omega)
+.list-description
+  +span-columns(12)

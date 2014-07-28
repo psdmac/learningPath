@@ -1,0 +1,41 @@
+// This file must be imported before loading html5-boilerplate
+
+// base
+$line-height: 1.4 !default
+$font-color: #222222 !default
+
+$link-color: #0000ee !default
+$link-hover-color: #0066ee !default
+$link-visited-color: #551a8b !default
+
+$selected-font-color: white !default
+$selected-background-color: #ff5e99 !default
+
+$invalid-background-color: #f0dddd !default
+
+$total-columns: 12
+$gutter-width: 1em
+$container-width: 960px
+$grid-padding: 0.5em
+$container-style: magic
+$medium: 48em 12
+$small: 30em 12
+
+$changee: #50b599
+$important: #FF8C00
+
+.btn
+  color: #f1f1f1
+  padding: 0.5em 1em
+  border-radius: 5px
+  background: $changee
+  +inline-block()
+  text-decoration: none
+  +transition(background 0.3s)
+  +box-shadow(inset 0px -1px darken($changee, 10%))
+  &:hover
+    background: darken($changee, 10%)
+
+a
+  &:focus, &:hover
+    text-decoration: none
