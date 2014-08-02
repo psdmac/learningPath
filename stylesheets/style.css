@@ -887,3 +887,32 @@ footer {
   color: #f1f1f1;
   padding: 0.5em;
   border-radius: 0.5em; }
+
+/* line 10, ../sass/partials/_path.sass */
+.result-wrapper ol {
+  list-style: none; }
+
+/* line 13, ../sass/partials/_path.sass */
+.order {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  background: #333333;
+  line-height: 40px;
+  color: white;
+  border-radius: 50%;
+  border: 5px solid #cccccc;
+  margin-right: 20px; }
+
+/* line 25, ../sass/partials/_path.sass */
+.inner-result {
+  padding: 20px 0; }
+  /* line 28, ../sass/partials/_path.sass */
+  .inner-result .title {
+    margin-bottom: 1em; }

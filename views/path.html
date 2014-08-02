@@ -1,3 +1,4 @@
+<h1>選擇你想要製作的專案</h1>
 <h2 class="classify">平台</h2>
 <div class="classify-wrapper">
   <ul class="tag-list">
@@ -24,4 +25,20 @@
       <input id="{{platform.zh_tw}}" name="web-platform" class="tag-input" type="checkbox" ng-init="platform.value=false" ng-model="platform.value">
     </li>
   </ul>
+</div>
+<div class="result-wrapper" ng-show="components[0].value || components[1].value || components[2].value || components[3].value">
+  <ol>
+    <li class="list-wrapper" ng-repeat="result in results">
+      <div class="inner-result">
+        <div class="title"><span class="order">{{$index+1}}</span>{{result.title}}</div>
+        <a target="_blank" ng-href="{{result.link}}" class="icon-image-wrapper" style="margin-bottom: 1em;">
+          <div class="icon-image-inner">
+            <img show-img="" class="icon-image" ng-src="{{result.image}}">
+          </div>
+        </a>
+        <label class="tag">{{result.rank}}</label>
+        <label class="tag">{{result.price}}</label>
+      </div>
+    </li>
+  </ol>
 </div>
