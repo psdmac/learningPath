@@ -37,8 +37,7 @@ myApp.controller('ToolCtrl', [
     $scope.getToolList = function() {
       return ParseData.getToolList().success(function(res) {
         $scope.lists = res.results;
-        $scope.total = res.results.length;
-        return console.log(res.results);
+        return $scope.total = res.results.length;
       });
     };
     $scope.getTagList = function() {
@@ -49,7 +48,6 @@ myApp.controller('ToolCtrl', [
     $scope.filterTag = function() {
       var Tool, query;
 
-      console.log($scope.tags);
       Tool = Parse.Object.extend("Tool");
       query = new Parse.Query(Tool);
       angular.forEach($scope.tags, function(tag) {
@@ -84,11 +82,17 @@ myApp.controller('ToolCtrl', [
       }
     };
     $scope.queryTool = function(data) {
-      return ParseData.queryToolList(data).success(function(res) {
-        return console.log(res);
-      });
+      return ParseData.queryToolList(data).success(function(res) {});
     };
     $scope.getToolList();
     return $scope.getTagList();
   }
 ]);
+
+myApp.directive('showImg', function() {
+  return function(scope, el, attrs) {
+    return $(el).error(function() {
+      return $(this).hide();
+    });
+  };
+});

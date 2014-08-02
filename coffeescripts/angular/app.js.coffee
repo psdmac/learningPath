@@ -49,13 +49,13 @@ myApp.controller 'ToolCtrl', ['$scope','$rootScope','$location','ParseData', ($s
     ParseData.getToolList().success (res) ->
       $scope.lists = res.results
       $scope.total = res.results.length
-      console.log res.results
+      # console.log res.results
   $scope.getTagList = ->
     ParseData.getTagList().success (res) ->
       $scope.tags = res.results
   # tag 變動時從新搜尋
   $scope.filterTag = ->
-    console.log $scope.tags
+    # console.log $scope.tags
     Tool = Parse.Object.extend("Tool")
     query = new Parse.Query(Tool)
     angular.forEach $scope.tags, (tag) ->
@@ -100,7 +100,7 @@ myApp.controller 'ToolCtrl', ['$scope','$rootScope','$location','ParseData', ($s
     #       queryString = queryString + ',' + '\"' + tag.objectId + '\"' + ': true'
   $scope.queryTool = (data) ->
     ParseData.queryToolList(data).success (res) ->
-      console.log res
+      # console.log res
 
   # 取得工具清單
   $scope.getToolList()
@@ -108,3 +108,7 @@ myApp.controller 'ToolCtrl', ['$scope','$rootScope','$location','ParseData', ($s
   $scope.getTagList()
 ]
 
+myApp.directive 'showImg', ->
+  (scope, el, attrs) ->
+    $(el).error ->
+      $(this).hide()

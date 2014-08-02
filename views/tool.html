@@ -9,11 +9,11 @@
 <h2>工具列表(共{{total}}個)</h2>
 <ul>
   <div class="list-wrapper" ng-repeat="list in lists">
-    <div class="icon-image-wrapper">
+    <a target="_blank" ng-href="{{list.link}}" class="icon-image-wrapper">
       <div class="icon-image-inner">
-        <img class="icon-image" ng-src="{{list.image}}">
+        <img show-img="" class="icon-image" ng-src="{{list.image}}">
       </div>
-    </div>
+    </a>
     <div class="intro">
       <h2>{{list.name}}</h2>
       <h3>{{list.company}}</h3>

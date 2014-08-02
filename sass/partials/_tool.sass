@@ -36,15 +36,21 @@
   +span-columns(12)
   margin-bottom: 3em
 .icon-image-wrapper
+  +box-shadow(0 2px 5px 1px rgba(0,0,0,.3), inset 0 0px 1px rgba(0,0,0,.5))
+  display: block
+  +box-sizing(border-box)
+  padding: 1em
+  background: #fff
   +span-columns(12)
   +at-breakpoint($small)
     +span-columns(6)
   +at-breakpoint($medium)
-    +span-columns(3)
+    +span-columns(4)
   .icon-image-inner
     width: 100%
-    padding-top: 100%
+    padding-top: 64%
     position: relative
+    +box-shadow(0 0 5px rgba(0,0,0,.5), inset 0 10px 50px rgba(0,0,0,.7))
   .icon-image
     position: absolute
     top: 0
@@ -56,6 +62,6 @@
   +at-breakpoint($small)
     +span-columns(6 omega)
   +at-breakpoint($medium)
-    +span-columns(9 omega)
+    +span-columns(8 omega)
 .list-description
   +span-columns(12)
