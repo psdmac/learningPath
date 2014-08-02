@@ -31,17 +31,17 @@ myApp.controller 'HeaderCtrl', ['$scope','$rootScope','$location','$timeout','$c
 ]
 
 myApp.controller 'TabCtrl', ['$scope','$rootScope','$location', ($scope, $rootScope, $location) ->
-  $scope.currentRoute = $location.path()
-  $scope.$on '$locationChangeSuccess', ->
-    $scope.currentRoute = $location.path()
-  currentUser = Parse.User.current()
-  if currentUser
-    console.log 'already login'
-    $rootScope.authStatus = true
-  else
-    console.log 'need login'
-    $rootScope.authStatus = false
-    $location.path '/login'
+  # $scope.currentRoute = $location.path()
+  # $scope.$on '$locationChangeSuccess', ->
+  #   $scope.currentRoute = $location.path()
+  # currentUser = Parse.User.current()
+  # if currentUser
+  #   console.log 'already login'
+  #   $rootScope.authStatus = true
+  # else
+  #   console.log 'need login'
+  #   $rootScope.authStatus = false
+  #   $location.path '/login'
 ]
 
 myApp.controller 'ToolCtrl', ['$scope','$rootScope','$location','ParseData', ($scope, $rootScope, $location, ParseData) ->

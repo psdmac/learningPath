@@ -30,25 +30,7 @@ myApp.controller('HeaderCtrl', [
   }
 ]);
 
-myApp.controller('TabCtrl', [
-  '$scope', '$rootScope', '$location', function($scope, $rootScope, $location) {
-    var currentUser;
-
-    $scope.currentRoute = $location.path();
-    $scope.$on('$locationChangeSuccess', function() {
-      return $scope.currentRoute = $location.path();
-    });
-    currentUser = Parse.User.current();
-    if (currentUser) {
-      console.log('already login');
-      return $rootScope.authStatus = true;
-    } else {
-      console.log('need login');
-      $rootScope.authStatus = false;
-      return $location.path('/login');
-    }
-  }
-]);
+myApp.controller('TabCtrl', ['$scope', '$rootScope', '$location', function($scope, $rootScope, $location) {}]);
 
 myApp.controller('ToolCtrl', [
   '$scope', '$rootScope', '$location', 'ParseData', function($scope, $rootScope, $location, ParseData) {
