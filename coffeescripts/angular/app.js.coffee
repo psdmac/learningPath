@@ -14,6 +14,9 @@ myApp.config ['$routeProvider', '$locationProvider', ($routeProvider, $locationP
     .when '/toolkit/create',
       templateUrl: 'views/create-tool.html'
       controller: 'CreateCtrl'
+    .when '/path',
+      templateUrl: '/views/path.html'
+      controller: 'PathCtrl'
     .otherwise
       redirectTo: '/toolkit'
   $locationProvider.html5Mode false
@@ -32,8 +35,8 @@ myApp.controller 'HeaderCtrl', ['$scope','$rootScope','$location','$timeout','$c
 
 myApp.controller 'TabCtrl', ['$scope','$rootScope','$location', ($scope, $rootScope, $location) ->
   # $scope.currentRoute = $location.path()
-  # $scope.$on '$locationChangeSuccess', ->
-  #   $scope.currentRoute = $location.path()
+  $scope.$on '$locationChangeSuccess', ->
+    $scope.currentRoute = $location.path()
   # currentUser = Parse.User.current()
   # if currentUser
   #   console.log 'already login'

@@ -16,6 +16,9 @@ myApp.config([
     }).when('/toolkit/create', {
       templateUrl: 'views/create-tool.html',
       controller: 'CreateCtrl'
+    }).when('/path', {
+      templateUrl: '/views/path.html',
+      controller: 'PathCtrl'
     }).otherwise({
       redirectTo: '/toolkit'
     });
@@ -30,7 +33,13 @@ myApp.controller('HeaderCtrl', [
   }
 ]);
 
-myApp.controller('TabCtrl', ['$scope', '$rootScope', '$location', function($scope, $rootScope, $location) {}]);
+myApp.controller('TabCtrl', [
+  '$scope', '$rootScope', '$location', function($scope, $rootScope, $location) {
+    return $scope.$on('$locationChangeSuccess', function() {
+      return $scope.currentRoute = $location.path();
+    });
+  }
+]);
 
 myApp.controller('ToolCtrl', [
   '$scope', '$rootScope', '$location', 'ParseData', function($scope, $rootScope, $location, ParseData) {
