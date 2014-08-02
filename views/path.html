@@ -1,0 +1,27 @@
+<h2 class="classify">平台</h2>
+<div class="classify-wrapper">
+  <ul class="tag-list">
+    <li class="tag-wrapper" ng-repeat="platform in platforms">
+      <label for="{{platform.zh_tw}}" class="tag" ng-class="{active: platform.value}">{{platform.zh_tw}}</label>
+      <input id="{{platform.zh_tw}}" name="web-platform" class="tag-input" type="checkbox" ng-init="platform.value=false" ng-model="platform.value">
+    </li>
+  </ul>
+</div>
+<h2 ng-show="platforms[0].value" class="classify">分類</h2>
+<div ng-show="platforms[0].value" class="classify-wrapper">
+  <ul class="tag-list">
+    <li class="tag-wrapper" ng-repeat="platform in platforms[0].classify">
+      <label for="{{platform.zh_tw}}" class="tag" ng-class="{active: platform.value}">{{platform.zh_tw}}</label>
+      <input id="{{platform.zh_tw}}" name="web-platform" class="tag-input" type="checkbox" ng-init="platform.value=false" ng-model="platform.value">
+    </li>
+  </ul>
+</div>
+<h2 ng-show="platforms[0].classify[0].value || platforms[0].classify[1].value || platforms[0].classify[2].value" class="classify">元素</h2>
+<div ng-show="platforms[0].classify[0].value || platforms[0].classify[1].value || platforms[0].classify[2].value" class="classify-wrapper">
+  <ul class="tag-list">
+    <li class="tag-wrapper" ng-repeat="platform in components">
+      <label for="{{platform.zh_tw}}" class="tag" ng-class="{active: platform.value}">{{platform.zh_tw}}</label>
+      <input id="{{platform.zh_tw}}" name="web-platform" class="tag-input" type="checkbox" ng-init="platform.value=false" ng-model="platform.value">
+    </li>
+  </ul>
+</div>
