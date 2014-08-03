@@ -746,9 +746,12 @@ textarea {
   float: left;
   margin-right: 1.69492%;
   display: inline;
-  background: #50b599;
+  background: #364e8c;
   padding: 0.5em;
   color: white; }
+  /* line 262, ../sass/partials/_page.sass */
+  .cheerup a {
+    color: #aebce0; }
 
 /* line 7, ../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/compass-h5bp-0.1.1/stylesheets/h5bp/_helpers.scss */
 .ir {

@@ -40,7 +40,7 @@
   <ol>
     <li class="list-wrapper" ng-repeat="result in results">
       <div class="inner-result">
-        <div class="title"><span class="order">{{$index+1}}</span>{{result.title}}</div>
+        <h2 class="title"><span class="order">{{$index+1}}</span>{{result.title}}</h2>
         <a target="_blank" ng-href="{{result.link}}" class="icon-image-wrapper" style="margin-bottom: 1em;">
           <div class="icon-image-inner">
             <img show-img="" class="icon-image" ng-src="{{result.image}}">
