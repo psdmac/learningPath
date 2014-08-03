@@ -45,6 +45,29 @@ myApp.controller 'PathCtrl', ['$scope','$rootScope','$location','ParseData', ($s
       value: false
     }
   ]
+  $scope.tools = [
+    {
+      title: 'Weebly - 创建独一无二的网站、博客和网店就是如此简单'
+      link: 'http://www.weebly.com/'
+      image: 'http://eadesign.me/wp-content/uploads/2013/03/weebly-logo.jpg'
+      descript: '创建独一无二的网站、博客和网店就是如此简单'
+    }
+    {
+      title: 'squarespace'
+      link: 'http://www.squarespace.com/'
+      image: 'http://s.websiteplanet.com/wp-content/uploads/2014/07/Squarespace.png'
+    }
+    {
+      title: 'Wix'
+      link: 'http://www.wix.com/'
+      image: 'http://cmxhub.com/wp-content/uploads/2014/05/wix.jpg'
+    }
+    {
+      title: 'Wordpress'
+      link: 'https://zh-tw.wordpress.com/'
+      image: 'http://wow-wp.org/wp-content/uploads/2011/10/wordpress.png'
+    }
+  ]
   $scope.results = [
     {
       title: '了解 Web 運作'

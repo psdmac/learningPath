@@ -37,20 +37,39 @@
   </ul>
 </div>
 <div class="result-wrapper" ng-show="components[0].value || components[1].value || components[2].value || components[3].value">
-  <ol>
-    <li class="list-wrapper" ng-repeat="result in results">
-      <div class="inner-result">
-        <h2 class="title"><span class="order">{{$index+1}}</span>{{result.title}}</h2>
-        <a target="_blank" ng-href="{{result.link}}" class="icon-image-wrapper" style="margin-bottom: 1em;">
-          <div class="icon-image-inner">
-            <img show-img="" class="icon-image" ng-src="{{result.image}}">
-          </div>
-        </a>
-        <label class="tag">{{result.rank}}</label>
-        <label class="tag">{{result.price}}</label>
-      </div>
-    </li>
-  </ol>
+  <div class="left-column">
+    <h2>你可以使用的服務</h2>
+    <ol>
+      <li class="list-wrapper" ng-repeat="result in tools">
+        <div class="inner-result">
+          <h2 class="title"><span class="order">{{$index+1}}</span>{{result.title}}</h2>
+          <a target="_blank" ng-href="{{result.link}}" class="icon-image-wrapper" style="margin-bottom: 1em;">
+            <div class="icon-image-inner">
+              <img show-img="" class="icon-image" ng-src="{{result.image}}">
+            </div>
+          </a>
+        </div>
+      </li>
+    </ol>
+  </div>
+  <div class="right-column">
+    <h2>你需要了解基礎網頁技能</h2>
+    <ol>
+      <li class="list-wrapper" ng-repeat="result in results">
+        <div class="inner-result">
+          <h2 class="title"><span class="order">{{$index+1}}</span>{{result.title}}</h2>
+          <a target="_blank" ng-href="{{result.link}}" class="icon-image-wrapper" style="margin-bottom: 1em;">
+            <div class="icon-image-inner">
+              <img show-img="" class="icon-image" ng-src="{{result.image}}">
+            </div>
+          </a>
+          <label class="tag">{{result.rank}}</label>
+          <label class="tag">{{result.price}}</label>
+        </div>
+      </li>
+    </ol>
+  </div>
+  
 </div>
 <article class="cheerup" ng-show="components[0].value || components[1].value || components[2].value || components[3].value">
   <p>學習完基礎課程，你已經有做出網頁的能力了，馬上開始做別遲疑，從做中學，你會進步的很快。有空多去<a target="_blank" href="http://week1.learning-path.info/#/8/1">社群</a>看看，與其他人切磋教學相長。</p>
