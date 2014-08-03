@@ -1,5 +1,9 @@
+<p>學習技術最好的方法，就是從做專案中學習，首先想想您的專案目標，讓我們提供最適合你的學習路徑。</p>
 <h1>選擇你想要製作的專案</h1>
-<h2 class="classify">平台</h2>
+<h2 class="classify">
+  平台
+  <span><i class="fa fa-info-circle"></i></span>
+</h2>
 <div class="classify-wrapper">
   <ul class="tag-list">
     <li class="tag-wrapper" ng-repeat="platform in platforms">
@@ -8,7 +12,10 @@
     </li>
   </ul>
 </div>
-<h2 ng-show="platforms[0].value" class="classify">分類</h2>
+<h2 ng-show="platforms[0].value" class="classify">
+  分類
+  <span><i class="fa fa-info-circle"></i></span>
+</h2>
 <div ng-show="platforms[0].value" class="classify-wrapper">
   <ul class="tag-list">
     <li class="tag-wrapper" ng-repeat="platform in platforms[0].classify">
@@ -17,7 +24,7 @@
     </li>
   </ul>
 </div>
-<h2 ng-show="platforms[0].classify[0].value || platforms[0].classify[1].value || platforms[0].classify[2].value" class="classify">元素</h2>
+<h2 ng-show="platforms[0].classify[0].value || platforms[0].classify[1].value || platforms[0].classify[2].value" class="classify">元素<span><i class="fa fa-info-circle"></i></span></h2>
 <div ng-show="platforms[0].classify[0].value || platforms[0].classify[1].value || platforms[0].classify[2].value" class="classify-wrapper">
   <ul class="tag-list">
     <li class="tag-wrapper" ng-repeat="platform in components">

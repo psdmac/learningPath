@@ -19,6 +19,8 @@ myApp.config([
     }).when('/path', {
       templateUrl: '/views/path.html',
       controller: 'PathCtrl'
+    }).when('/platform', {
+      templateUrl: '/views/platform.html'
     }).otherwise({
       redirectTo: '/toolkit'
     });

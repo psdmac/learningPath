@@ -17,6 +17,8 @@ myApp.config ['$routeProvider', '$locationProvider', ($routeProvider, $locationP
     .when '/path',
       templateUrl: '/views/path.html'
       controller: 'PathCtrl'
+    .when '/platform',
+      templateUrl: '/views/platform.html'
     .otherwise
       redirectTo: '/toolkit'
   $locationProvider.html5Mode false

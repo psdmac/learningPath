@@ -554,6 +554,175 @@ footer {
     .fblink a:hover {
       background-color: rgba(59, 89, 153, 0.9); }
 
+/* line 150, ../sass/partials/_page.sass */
+.platform-wrapper {
+  width: 100%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+  padding-top: 30%;
+  background: #333333;
+  position: relative;
+  overflow: hidden; }
+  /* line 157, ../sass/partials/_page.sass */
+  .platform-wrapper .platform-bg {
+    width: 100%;
+    height: 100%;
+    background-color: #cccccc;
+    background-image: url(../img/learningpath.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0; }
+
+/* line 168, ../sass/partials/_page.sass */
+.form-wrapper {
+  width: 100%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline; }
+
+/* line 171, ../sass/partials/_page.sass */
+.ss-form {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 1em;
+  background: rgba(255, 255, 255, 0.8); }
+  @media (min-width: 30em) {
+    /* line 171, ../sass/partials/_page.sass */
+    .ss-form {
+      max-width: 600px;
+      margin: 0 auto; } }
+  /* line 179, ../sass/partials/_page.sass */
+  .ss-form .ss-q-title {
+    margin-top: 1em;
+    color: darkorange; }
+  /* line 182, ../sass/partials/_page.sass */
+  .ss-form .ss-q-help {
+    margin-top: 0.5em;
+    margin-bottom: 3px;
+    font-size: 14px; }
+  /* line 186, ../sass/partials/_page.sass */
+  .ss-form .ss-choice-item {
+    list-style: none;
+    margin-top: 3px; }
+  /* line 189, ../sass/partials/_page.sass */
+  .ss-form .ss-item.ss-navigate {
+    width: 200px;
+    margin: 0 auto; }
+  /* line 192, ../sass/partials/_page.sass */
+  .ss-form .ss-question-list {
+    margin: 0; }
+
+/* line 195, ../sass/partials/_page.sass */
+.ss-info-wrapper {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 1em; }
+  /* line 198, ../sass/partials/_page.sass */
+  .ss-info-wrapper input {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 5px;
+    width: 100%; }
+
+/* line 202, ../sass/partials/_page.sass */
+textarea {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  resize: none;
+  width: 100%; }
+
+/* line 206, ../sass/partials/_page.sass */
+#entry_511581303_other_option_response {
+  width: 100px; }
+
+/* line 208, ../sass/partials/_page.sass */
+#ss-submit {
+  margin-top: 20px;
+  font-size: 1.5em;
+  width: 200px;
+  height: 40px;
+  background: #50b599;
+  border: 0;
+  border-radius: 3px;
+  color: #f1f1f1;
+  -webkit-box-shadow: inset 0px -5px 0px #3e947c;
+  -moz-box-shadow: inset 0px -5px 0px #3e947c;
+  box-shadow: inset 0px -5px 0px #3e947c; }
+  /* line 218, ../sass/partials/_page.sass */
+  #ss-submit:hover {
+    -webkit-transform: translateY(2px);
+    -moz-transform: translateY(2px);
+    -ms-transform: translateY(2px);
+    -o-transform: translateY(2px);
+    transform: translateY(2px);
+    -webkit-box-shadow: inset 0px -3px 0px #3e947c;
+    -moz-box-shadow: inset 0px -3px 0px #3e947c;
+    box-shadow: inset 0px -3px 0px #3e947c; }
+  /* line 221, ../sass/partials/_page.sass */
+  #ss-submit:disabled {
+    background: #999999;
+    border: 0;
+    border-radius: 3px;
+    color: #f1f1f1;
+    -webkit-box-shadow: inset 0px -5px 0px gray;
+    -moz-box-shadow: inset 0px -5px 0px gray;
+    box-shadow: inset 0px -5px 0px gray; }
+    /* line 227, ../sass/partials/_page.sass */
+    #ss-submit:disabled:hover {
+      -webkit-transform: translateY(0px);
+      -moz-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+      -o-transform: translateY(0px);
+      transform: translateY(0px);
+      -webkit-box-shadow: inset 0px -5px 0px gray;
+      -moz-box-shadow: inset 0px -5px 0px gray;
+      box-shadow: inset 0px -5px 0px gray; }
+
+/* line 231, ../sass/partials/_page.sass */
+.article {
+  width: 100%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline; }
+  /* line 233, ../sass/partials/_page.sass */
+  .article p {
+    line-height: 1.5em; }
+  /* line 235, ../sass/partials/_page.sass */
+  .article li {
+    margin: 0.5em 0; }
+  /* line 237, ../sass/partials/_page.sass */
+  .article a {
+    color: #50b599; }
+  /* line 239, ../sass/partials/_page.sass */
+  .article.changee {
+    width: 100%;
+    float: left;
+    margin-right: 1.69492%;
+    display: inline; }
+    @media (min-width: 30em) {
+      /* line 239, ../sass/partials/_page.sass */
+      .article.changee {
+        width: 49.15254%;
+        float: right;
+        margin-right: 0; } }
+    @media (min-width: 48em) {
+      /* line 239, ../sass/partials/_page.sass */
+      .article.changee {
+        width: 74.57627%;
+        float: right;
+        margin-right: 0; } }
+
 /* line 7, ../../../../../../Applications/Fire.app/Contents/Resources/lib/ruby/compass_extensions/compass-h5bp-0.1.1/stylesheets/h5bp/_helpers.scss */
 .ir {
   background-color: transparent;
