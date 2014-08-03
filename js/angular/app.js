@@ -22,7 +22,7 @@ myApp.config([
     }).when('/platform', {
       templateUrl: '/views/platform.html'
     }).otherwise({
-      redirectTo: '/toolkit'
+      redirectTo: '/platform'
     });
     $locationProvider.html5Mode(false);
     return $locationProvider.hashPrefix("!");

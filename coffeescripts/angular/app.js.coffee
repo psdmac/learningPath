@@ -20,7 +20,7 @@ myApp.config ['$routeProvider', '$locationProvider', ($routeProvider, $locationP
     .when '/platform',
       templateUrl: '/views/platform.html'
     .otherwise
-      redirectTo: '/toolkit'
+      redirectTo: '/platform'
   $locationProvider.html5Mode false
   $locationProvider.hashPrefix "!"
 ]
