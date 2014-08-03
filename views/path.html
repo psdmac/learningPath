@@ -2,7 +2,7 @@
 <h1>選擇你想要製作的專案</h1>
 <h2 class="classify">
   平台
-  <span><i class="fa fa-info-circle"></i></span>
+  
 </h2>
 <div class="classify-wrapper">
   <ul class="tag-list">
@@ -14,7 +14,7 @@
 </div>
 <h2 ng-show="platforms[0].value" class="classify">
   分類
-  <span><i class="fa fa-info-circle"></i></span>
+  
 </h2>
 <div ng-show="platforms[0].value" class="classify-wrapper">
   <ul class="tag-list">
@@ -24,7 +24,7 @@
     </li>
   </ul>
 </div>
-<h2 ng-show="platforms[0].classify[0].value || platforms[0].classify[1].value || platforms[0].classify[2].value" class="classify">元素<span><i class="fa fa-info-circle"></i></span></h2>
+<h2 ng-show="platforms[0].classify[0].value || platforms[0].classify[1].value || platforms[0].classify[2].value" class="classify">元素</h2>
 <div ng-show="platforms[0].classify[0].value || platforms[0].classify[1].value || platforms[0].classify[2].value" class="classify-wrapper">
   <ul class="tag-list">
     <li class="tag-wrapper" ng-repeat="platform in components">
@@ -49,3 +49,11 @@
     </li>
   </ol>
 </div>
+<article class="cheerup" ng-show="components[0].value || components[1].value || components[2].value || components[3].value">
+  <p>學習完基礎課程，你已經有做出網頁的能力了，馬上開始做別遲疑，從做中學，你會進步的很快。有空多去<a target="_blank" href="http://week1.learning-path.info/#/8/1">社群</a>看看，與其他人切磋教學相長。</p>
+  <h2>你可能還會需要</h2>
+  <ul>
+    <li><a target="_blank" href="http://week1.learning-path.info/#/7">實體課程</a></li>
+    <li><a target="_blank" href="http://week1.learning-path.info/#/6">追蹤些東西</a></li>
+  </ul>  
+</article>
