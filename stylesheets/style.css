@@ -1122,27 +1122,21 @@ textarea {
   float: left;
   margin-right: 1.69492%;
   display: inline; }
-  /* line 32, ../sass/partials/_path.sass */
-  .left-column h2 {
-    background: white; }
-  /* line 35, ../sass/partials/_path.sass */
+  /* line 33, ../sass/partials/_path.sass */
   .left-column .icon-image-wrapper {
     width: 83.05085%;
     float: left;
     margin-right: 1.69492%;
     display: inline; }
 
-/* line 37, ../sass/partials/_path.sass */
+/* line 35, ../sass/partials/_path.sass */
 .right-column {
   width: 49.15254%;
   float: right;
   margin-right: 0;
   *margin-left: -1em;
   display: inline; }
-  /* line 38, ../sass/partials/_path.sass */
-  .right-column h2 {
-    background: white; }
-  /* line 41, ../sass/partials/_path.sass */
+  /* line 37, ../sass/partials/_path.sass */
   .right-column .icon-image-wrapper {
     width: 83.05085%;
     float: left;
