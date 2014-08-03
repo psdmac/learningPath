@@ -723,7 +723,24 @@ textarea {
         float: right;
         margin-right: 0; } }
 
-/* line 247, ../sass/partials/_page.sass */
+/* line 246, ../sass/partials/_page.sass */
+.youtube-wrapper {
+  width: 100%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+  padding-top: 56.25%;
+  position: relative;
+  margin-bottom: 1em; }
+  /* line 251, ../sass/partials/_page.sass */
+  .youtube-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+/* line 257, ../sass/partials/_page.sass */
 .cheerup {
   width: 100%;
   float: left;
