@@ -28,11 +28,12 @@
   .title
     margin-bottom: 1em
 
-.left-column
-  +span-columns(6)
+.left-column,.right-column
+  +span-columns(12)
+  +at-breakpoint($small)
+    +span-columns(6)
   .icon-image-wrapper
     +span-columns(10)
 .right-column
-  +span-columns(6 omega)
-  .icon-image-wrapper
-    +span-columns(10)
+  +at-breakpoint($small)
+    +span-columns(6 omega)

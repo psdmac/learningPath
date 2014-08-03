@@ -1117,28 +1117,27 @@ textarea {
     margin-bottom: 1em; }
 
 /* line 31, ../sass/partials/_path.sass */
-.left-column {
-  width: 49.15254%;
+.left-column, .right-column {
+  width: 100%;
   float: left;
   margin-right: 1.69492%;
   display: inline; }
-  /* line 33, ../sass/partials/_path.sass */
-  .left-column .icon-image-wrapper {
+  @media (min-width: 30em) {
+    /* line 31, ../sass/partials/_path.sass */
+    .left-column, .right-column {
+      width: 49.15254%;
+      float: left;
+      margin-right: 1.69492%; } }
+  /* line 35, ../sass/partials/_path.sass */
+  .left-column .icon-image-wrapper, .right-column .icon-image-wrapper {
     width: 83.05085%;
     float: left;
     margin-right: 1.69492%;
     display: inline; }
 
-/* line 35, ../sass/partials/_path.sass */
-.right-column {
-  width: 49.15254%;
-  float: right;
-  margin-right: 0;
-  *margin-left: -1em;
-  display: inline; }
+@media (min-width: 30em) {
   /* line 37, ../sass/partials/_path.sass */
-  .right-column .icon-image-wrapper {
-    width: 83.05085%;
-    float: left;
-    margin-right: 1.69492%;
-    display: inline; }
+  .right-column {
+    width: 49.15254%;
+    float: right;
+    margin-right: 0; } }
